@@ -1,0 +1,51 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\NCB\Documents\Quartus\milestone1\simulation\modelsim
+vmilestone1
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+IX`@?WiQ^bVVn;]n8IY6@Y0
+VgSo_F8Zkbkha@M:0Oi56j3
+S1
+Z2 dC:\Users\NCB\Documents\Quartus\milestone1\simulation\modelsim
+w1727794526
+8C:/Users/NCB/Documents/Quartus/milestone1/milestone1.sv
+FC:/Users/NCB/Documents/Quartus/milestone1/milestone1.sv
+L0 1
+Z3 OV;L;10.1d;51
+r1
+31
+Z4 o-sv -work work -O0
+!i10b 1
+!s100 G]4kAQLV:G^_XEDYz>E2>1
+!s105 milestone1_sv_unit
+!s85 0
+!s108 1727837132.079000
+!s107 C:/Users/NCB/Documents/Quartus/milestone1/milestone1.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/NCB/Documents/Quartus/milestone1|C:/Users/NCB/Documents/Quartus/milestone1/milestone1.sv|
+!s101 -O0
+Z5 !s92 -sv -work work +incdir+C:/Users/NCB/Documents/Quartus/milestone1 -O0
+vmilestone1_tb
+R1
+!i10b 1
+!s100 KOHZ=`CM]AW76O121dbLD3
+IFGKB?gH>^NeO7?Y4GjjFU1
+VYL>Hh=I<DT_`85J4N24TD2
+!s105 milestone1_tb_sv_unit
+S1
+R2
+w1727837087
+8C:/Users/NCB/Documents/Quartus/milestone1/milestone1_tb.sv
+FC:/Users/NCB/Documents/Quartus/milestone1/milestone1_tb.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1727837132.167000
+!s107 C:/Users/NCB/Documents/Quartus/milestone1/milestone1_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/NCB/Documents/Quartus/milestone1|C:/Users/NCB/Documents/Quartus/milestone1/milestone1_tb.sv|
+!s101 -O0
+R4
+R5

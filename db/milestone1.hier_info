@@ -1,0 +1,29 @@
+|milestone1
+i_clk => o_soda~reg0.CLK
+i_clk => o_change[0]~reg0.CLK
+i_clk => o_change[1]~reg0.CLK
+i_clk => o_change[2]~reg0.CLK
+i_clk => state~1.DATAIN
+i_nickle => next_state.OUTPUTSELECT
+i_nickle => pre_o_soda.OUTPUTSELECT
+i_nickle => pre_o_soda.OUTPUTSELECT
+i_nickle => next_state.OUTPUTSELECT
+i_nickle => pre_o_change.OUTPUTSELECT
+i_nickle => pre_o_soda.OUTPUTSELECT
+i_nickle => Selector1.IN3
+i_nickle => Selector2.IN3
+i_nickle => Selector3.IN3
+i_dime => pre_o_soda.OUTPUTSELECT
+i_dime => pre_o_soda.OUTPUTSELECT
+i_dime => next_state.OUTPUTSELECT
+i_dime => pre_o_change.DATAA
+i_dime => next_state.DATAA
+i_quarter => pre_o_soda.DATAA
+i_quarter => pre_o_soda.DATAA
+i_quarter => next_state.DATAA
+o_soda <= o_soda~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_change[0] <= o_change[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_change[1] <= o_change[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_change[2] <= o_change[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

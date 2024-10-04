@@ -1,0 +1,41 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do milestone1_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+C:/Users/NCB/Documents/Quartus/milestone1 {C:/Users/NCB/Documents/Quartus/milestone1/milestone1.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module milestone1
+# 
+# Top level modules:
+# 	milestone1
+# 
+# vlog -sv -work work +incdir+C:/Users/NCB/Documents/Quartus/milestone1 {C:/Users/NCB/Documents/Quartus/milestone1/milestone1_tb.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module milestone1_tb
+# 
+# Top level modules:
+# 	milestone1_tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  milestone1_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps milestone1_tb 
+# Loading sv_std.std
+# Loading work.milestone1_tb
+# Loading work.milestone1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Break in Module milestone1_tb at C:/Users/NCB/Documents/Quartus/milestone1/milestone1_tb.sv line 101
+# Simulation Breakpoint: Break in Module milestone1_tb at C:/Users/NCB/Documents/Quartus/milestone1/milestone1_tb.sv line 101
+# MACRO ./milestone1_run_msim_rtl_verilog.do PAUSED at line 17

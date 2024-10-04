@@ -1,0 +1,126 @@
+module SystemVerilog1(
+	input logic 			nickel_i,
+	input logic 			dime_i,
+	input logic 			quarter_i,
+	input logic 			clk_i,
+	output logic [2:0] 	change_o,
+//	output logic [2:0] 	state,
+//	output logic [2:0] 	next_state,
+//	output logic 			pre_soda_o,
+//	output logic [2:0] 	pre_change_o,
+	output logic 			soda_o
+);
+	
+	
+	parameter S0 = 2'b00;
+	parameter S5 = 2'b01;
+	parameter S10 = 2'b10;
+	parameter S15 = 2'b11;
+	
+	logic [1:0] state;
+	logic [1:0] next_state;
+	logic [2:0] pre_change_o;
+	logic 		pre_soda_o;
+	
+	// next state logic
+	always_comb begin
+		next_state = state;
+		pre_change_o = 3'b000;
+		pre_soda_o = 0;
+		case (state)
+			S0: begin
+				if (nickel_i) begin
+					next_state = S5;
+					pre_change_o = 3'b000;
+					pre_soda_o = 0;
+				end else if (dime_i) begin 
+					next_state = S10;
+					pre_change_o = 3'b000;
+					pre_soda_o = 0;
+				end else if (quarter_i) begin
+					next_state = S0;
+					pre_change_o = 3'b001; // change = 5
+					pre_soda_o = 0;
+				end else begin 
+					next_state = state;
+					pre_change_o = 3'b000;
+					pre_soda_o = 0;
+				end 
+			end
+			
+			S5: begin
+				if (nickel_i) begin 
+					next_state = S10;
+					pre_change_o = 3'b000;
+					pre_soda_o = 0;
+				end else if (dime_i) begin 
+					next_state = S15;
+					pre_change_o = 3'b000;
+					pre_soda_o = 0;
+				end else if (quarter_i) begin
+					next_state = S0;
+					pre_change_o = 3'b010; // change = 10
+					pre_soda_o = 1;
+				end else begin 
+					next_state = state;
+					pre_change_o = 3'b000;
+					pre_soda_o = 0;
+				end
+			end
+			
+			S10: begin
+				if (nickel_i) begin 
+					next_state = S15;
+					pre_change_o = 3'b000;
+					pre_soda_o = 0;
+				end else if (dime_i) begin 
+					next_state = S0;
+					pre_change_o = 3'b000;
+					pre_soda_o = 1;
+				end else if (quarter_i) begin
+					next_state = S0;
+					pre_change_o = 3'b011; // change = 15
+					pre_soda_o = 1;
+				end else begin 
+					next_state = state;
+					pre_change_o = 3'b000;
+					pre_soda_o = 0;
+				end
+			end
+			
+			S15: begin
+				if (nickel_i) begin 
+					next_state = S0;
+					pre_change_o = 3'b000;
+					pre_soda_o = 1;
+				end else if (dime_i) begin
+					next_state = S0;
+					pre_change_o = 3'b001; // change = 5
+					pre_soda_o = 1;
+				end else if (quarter_i) begin
+					next_state = S0;
+					pre_change_o = 3'b100; // change = 20
+					pre_soda_o = 1;
+				end else begin 
+					next_state = state;
+					pre_change_o = 3'b000;
+					pre_soda_o = 0;
+				end	
+			end
+		endcase
+	end
+	
+	// current state logic
+	always_ff @(posedge clk_i) begin
+		state <= next_state;
+		change_o <= pre_change_o;
+		soda_o <= pre_soda_o;
+	end
+
+	endmodule
+		
+		
+		
+		
+		
+	

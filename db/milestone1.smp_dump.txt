@@ -1,0 +1,7 @@
+
+State Machine - |milestone1|state
+Name state.S15 state.S10 state.S5 state.S0 
+state.S0 0 0 0 0 
+state.S5 0 0 1 1 
+state.S10 0 1 0 1 
+state.S15 1 0 0 1 

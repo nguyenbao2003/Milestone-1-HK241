@@ -1,0 +1,15 @@
+C:/Users/Admin/OneDrive/Documents/Quartus/milestone1/testbench.sv {1 {vlog -work work -sv C:/Users/Admin/OneDrive/Documents/Quartus/milestone1/testbench.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module testbench
+
+Top level modules:
+	testbench
+
+} {} {}} C:/Users/Admin/OneDrive/Documents/Quartus/milestone1/SystemVerilog1.sv {1 {vlog -work work -sv C:/Users/Admin/OneDrive/Documents/Quartus/milestone1/SystemVerilog1.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module SystemVerilog1
+
+Top level modules:
+	SystemVerilog1
+
+} {} {}}

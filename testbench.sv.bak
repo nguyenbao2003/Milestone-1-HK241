@@ -1,0 +1,102 @@
+module testbench;
+
+  // Signals
+  logic nickel_i;
+  logic dime_i;
+  logic quarter_i;
+  logic clk_i;
+  logic [2:0] change_o;
+  logic soda_o;
+
+  // Instantiate the Unit Under Test (UUT)
+  SystemVerilog1 uut (
+    .nickel_i(nickel_i),
+    .dime_i(dime_i),
+    .quarter_i(quarter_i),
+    .clk_i(clk_i),
+    .change_o(change_o),
+    .soda_o(soda_o)
+  );
+
+  // Clock Generation
+  initial begin
+    clk_i = 0;
+    forever #20 clk_i = ~clk_i;  // 40 ns period
+  end
+
+  // Input stimulus
+  initial begin
+    // Initialize inputs
+    nickel_i = 0;
+    dime_i = 0;
+    quarter_i = 0;
+
+    // Wait for reset to complete, if any
+    #50;
+
+    // Insert a nickel (at time 50 ns)
+    nickel_i = 1;
+    #40; 
+    nickel_i = 0;
+
+    // Insert a quarter (at time 130 ns)
+    #40; 
+    quarter_i = 1;
+    #40;
+    quarter_i = 0;
+
+    // Insert a dime (at time 210 ns)
+    #40;
+    dime_i = 1;
+    #40;
+    dime_i = 0;
+
+    // Insert another quarter (at time 290 ns)
+    #40;
+    quarter_i = 1;
+    #40;
+    quarter_i = 0;
+
+    // Insert a nickel (at time 370 ns)
+    #40;
+    nickel_i = 1;
+    #40;
+    nickel_i = 0;
+
+    // Insert a dime (at time 450 ns)
+    #40;
+    dime_i = 1;
+    #40;
+    dime_i = 0;
+
+    // Insert a quarter (at time 530 ns)
+    #40;
+    quarter_i = 1;
+    #40;
+    quarter_i = 0;
+
+    // Wait and observe outputs
+    #120;
+
+    // Check for expected outputs
+    if (soda_o == 1) begin
+      $display("Soda dispensed correctly.");
+    end else begin
+      $display("Error: Soda not dispensed.");
+    end
+
+    if (change_o != 0) begin
+      $display("Change output: %0d", change_o);
+    end
+
+    // Finish simulation after some time
+    $finish;
+  end
+
+  // Monitor for debugging
+  initial begin
+    $monitor("At time %t: nickel=%0b, dime=%0b, quarter=%0b, soda=%0b, change=%0b", 
+             $time, nickel_i, dime_i, quarter_i, soda_o, change_o);
+  end
+
+endmodule

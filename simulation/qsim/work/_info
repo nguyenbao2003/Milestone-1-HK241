@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Admin\OneDrive\Documents\Quartus\milestone1\simulation\qsim
+vmilestone1
+Z1 !s100 DjECfzfZ3?]8FaIDf78j03
+Z2 Ih0T;hdh5YfZS21[zZg39_3
+Z3 V8W9M4dMbIYT@JIGZ]oE@z2
+Z4 dC:\Users\NCB\Documents\Quartus\milestone1\simulation\qsim
+Z5 w1727790533
+Z6 8milestone1.vo
+Z7 Fmilestone1.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|milestone1.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1727790534.465000
+Z12 !s107 milestone1.vo|
+!s101 -O0
+vmilestone1_vlg_check_tst
+!i10b 1
+Z13 !s100 G=hDE2AT^9MRmLX0;:U7a3
+Z14 IB<nN=fX9JBCmkWQI73jQh1
+Z15 V[=G]g8>aQTzMF?g[D<d6m2
+R4
+Z16 w1727790532
+Z17 8milestone1.vt
+Z18 Fmilestone1.vt
+L0 63
+R8
+r1
+!s85 0
+31
+Z19 !s108 1727790534.577000
+Z20 !s107 milestone1.vt|
+Z21 !s90 -work|work|milestone1.vt|
+!s101 -O0
+R10
+vmilestone1_vlg_sample_tst
+!i10b 1
+Z22 !s100 C;PUbXAQLOFl[gc3G?JT31
+Z23 I?nVV;1iAzmC1Qn@G@W<962
+Z24 V]J^h6_Dbbd^0HV<CCP^:E0
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vmilestone1_vlg_vec_tst
+!i10b 1
+Z25 !s100 2n9J:3lBc5mZBgJnHC24[3
+Z26 IOWZ32=G9I`F3I;9fRJNAi3
+Z27 VU:2ZY`6cmzVW@Q5`TgoNa2
+R4
+R16
+R17
+R18
+Z28 L0 220
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
