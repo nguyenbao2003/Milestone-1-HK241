@@ -30,71 +30,80 @@ module milestone1_tb;
 		i_nickle = 0;
 		i_dime = 0;
 		i_quarter = 0;
-
-		// Apply input stimulus
+		
+		//Test case 1
 //		@(posedge i_clk);
-//		@(posedge i_clk);	
-//		i_nickle = 1;
-//		@(posedge i_clk);  // Wait for one clock cycle
-//		@(posedge i_clk);
-//		i_nickle = 0;	
 //		i_quarter = 1;
 //		@(posedge i_clk);
 //		i_quarter = 0;
+
+
+
+		//Test case 2
+//		@(posedge i_clk);
+//		i_nickle = 1;
+//		@(posedge i_clk);
+//		i_nickle = 0;
+		
+		//Test case 3
+//		@(posedge i_clk);
 //		i_dime = 1;
-//
 //		@(posedge i_clk);
 //		i_dime = 0;
+
+		//Test case 4
 //		@(posedge i_clk);
-//		i_quarter = 1;
-//
+//		i_nickle = 1;
 //		@(posedge i_clk);
-//		i_quarter = 0;
+//		@(posedge i_clk);
+//		i_nickle = 0;
+		
+		//Test case 5
+//		@(posedge i_clk);
 //		i_nickle = 1;
 //		@(posedge i_clk);
 //		i_nickle = 0;
 //		i_dime = 1;
-//
+//		@(posedge i_clk);
+//		i_dime = 0;
+
+		//Test case 6
+//		@(posedge i_clk);
+//		i_nickle = 1;
+//		@(posedge i_clk);
+//		i_nickle = 0;
+//		i_quarter = 1;
+//		@(posedge i_clk);
+//		i_quarter = 0;
+
+		//Test case 7
+//		@(posedge i_clk);
+//		i_nickle = 1;
+//		@(posedge i_clk);
+//		i_nickle = 0;
+//		i_dime = 1;
 //		@(posedge i_clk);
 //		i_dime = 0;
 //		i_quarter = 1;
 //		@(posedge i_clk);
 //		i_quarter = 0;
-//		i_nickle = 1;
-//
+		
+		//Test case 8
+//		@(posedge i_clk);
+//		i_dime = 1;
 //		@(posedge i_clk);
 //		@(posedge i_clk);
 //		i_dime = 0;
-		@(posedge i_clk);
-		@(posedge i_clk);
-		@(posedge i_clk);
-		
-		i_dime = 1;
-		
-		@(posedge i_clk);
-		i_dime = 0;
-		
-		@(posedge i_clk);
-		i_quarter = 1;
-		
-		@(posedge i_clk);
-		i_quarter = 0;
-		
+
+		//Test case 9
 		@(posedge i_clk);
 		i_nickle = 1;
-		
 		@(posedge i_clk);
 		i_nickle = 0;
-		i_dime = 1;
-		
-		@(posedge i_clk);
-		i_dime = 0;
 		i_quarter = 1;
-		
+		@(posedge i_clk);
 		@(posedge i_clk);
 		i_quarter = 0;
-		
-
 		// Wait and observe outputs
 		#120
 		// Finish simulation after some time

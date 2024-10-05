@@ -33,7 +33,7 @@ module milestone1(
 				end else if (i_quarter) begin
 					next_state = S0;
 					pre_o_change = 3'b001; // change = 5
-					pre_o_soda = 1'b0;
+					pre_o_soda = 1'b1;
 				end else begin 
 					next_state = state;
 					pre_o_change = 3'b000;
